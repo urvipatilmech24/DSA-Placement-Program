@@ -2,11 +2,10 @@ import java.util.Scanner;
 
 public class LibraryFine {
     public static void main(String[] args){
-        Scanner sc;
+        Scanner sc = new Scanner(System.in);
         char choice;
 
         do{
-        sc = new Scanner(System.in);
         System.out.print("Enter book name: ");
         String book = sc.nextLine();
 
@@ -25,6 +24,7 @@ public class LibraryFine {
 
         System.out.print("\nProcess next book? (y/n): ");
         choice = sc.next().charAt(0);
+        sc.nextLine();
         }while (choice == 'y' || choice == 'Y');
 
         sc.close();
